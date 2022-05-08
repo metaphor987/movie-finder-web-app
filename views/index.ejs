@@ -1,29 +1,46 @@
+    <div class="row">
 
-    <div class="jumbotron">
-        <h1>Movie Finder</h1>
-        <p></p>
+        <div class="jumbotron d-flex justify-content-center">
+            <h1 class="text-primary">Simple Movie Finder</h1>
+        </div>
+
+    <div>
+        <p class="border bg-light p-4 m-3">
+            This is the CPA2 project by Huijie Liu, a simple movie finder. 
+            It already has a large dataset (around 26000 movies data items) and 
+            you could easily searching movie by either year or keyword. Have fun!
+        </p>
     </div>
 
-    <p class="p-3 m-3 border border-primary bg-light">
-        Huijie's CPA, a Movie Finder.
-    </p>
-    
-    <% if (true) {%>  
+   <div class="row m-3">
+       <div class="col p-3 justify-content-center">
         <form method="post" action="/movies/bySubject">
-            Show Movies by Year: 
+            Find Movies in a specific Year(1990-2018): 
+            <br>
               <input type="number" name="year" 
                      placeholder="e.g. 1990">
-            <input type="submit">
+            <br>
+            <input type="submit" class="btn btn-secondary">
         </form>
-        <br>
-
+       </div>
+       <div class="col p-3 justify-content-center">
         <form method="post" action="/movies/byMovieName">
-            Show Movies by keyword in title: 
+            Find Movies by a keyword
+            <br>
               <input type="text" name="title" 
-                     placeholder="e.g. White">
-            <input type="submit">
+                     placeholder="e.g. Love">
+            <br>
+            <input type="submit" class="btn btn-secondary ">
         </form>
-        <br>
-    <% } %>
+
+       </div>
+
+
+   </div>
+   <div class="m-1">
+        <img src="public/images/bg.jpeg" alt="movie background"> 
+    <div>
+
+    </div>
 
 

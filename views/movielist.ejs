@@ -1,32 +1,17 @@
-<h1>The movies are</h1>
-Here we want a ul list with the title, year, cast, genres
-<hr>
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>title</th>
-            <th>year #</th>
-        </tr>
-    </thead>
-    <tbody>
-    <% for (movie of movies) {
-        const title = movie['title'];
-        const year = movie['year'];
-         %>
-      <tr class="mb-2"> 
-        <td>
-            <th>test</th>
-            <%=  movie['year'] %>
-            <%=  movie['title'] %>
-            <br>
-        </td>
-    </tr>
-    <% } %>
-    </tbody>
-</table>
+<h1>Here are the Movies we found!</h1>
 
-<pre>
-    <!-- 
-        <%= JSON.stringify(movies,null,5) %> 
-    -->
-</pre>
+<hr>
+
+<div class="d-flex flex-wrap flex-basis: 33%">
+    <% for (movie of movies) { %>
+            <div class="m-3 border border-warning bg-light rounded-3">
+                <div class="p-2">
+                    Year: <%= movie.year %>
+                </div>
+
+                <div class="p-2">
+                    Title: <%= movie.title %>
+                </div>
+            </div>
+    <% } %>
+</div>
