@@ -1,0 +1,32 @@
+<h1>The courses are</h1>
+Here we want a ul list with the title, year, cast, genres
+<hr>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>title</th>
+            <th>year #</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% for (course of courses) {
+        const title = course['title'];
+        const year = course['year'];
+         %>
+      <tr class="mb-2"> 
+        <td>
+            <th>test</th>
+            <%=  course['year'] %>
+            <%=  course['title'] %>
+            <br>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+
+<pre>
+    <!-- 
+        <%= JSON.stringify(courses,null,5) %> 
+    -->
+</pre>
