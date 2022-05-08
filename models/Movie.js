@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.Types.ObjectId;
 const Mixed = Schema.Types.Mixed;
 
-var courseSchema = Schema( {
+var movieSchema = Schema( {
     title: String,
     year: Number,
     cast: Mixed,
     genres: Mixed,
 } );
 
-module.exports = mongoose.model( 'Course', courseSchema );
+module.exports = mongoose.model( 'Movie', movieSchema );

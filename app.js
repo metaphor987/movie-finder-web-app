@@ -4,8 +4,6 @@
 
 // *********************************************************** //
 //  Loading packages to support the server
-// *********************************************************** //
-
 const createError = require("http-errors"); // to handle the server errors
 const express = require("express");
 const path = require("path");  // to refer to local paths
@@ -17,14 +15,12 @@ const axios = require("axios")
 
 // *********************************************************** //
 //  Loading models
-// *********************************************************** //
-
-const Course = require('./models/Course')
+const Movie = require('./models/Movie')
 
 // *********************************************************** //
 //  Loading JSON datasets
 // *********************************************************** //
-const courses = require('./public/data/movies.json')
+const movies = require('./public/data/movies.json')
 
 // *********************************************************** //
 //  Connecting to the database
@@ -106,32 +102,32 @@ app.get("/about", (req, res, next) => {
 
 app.get('/upsertDB',
   async (req,res,next) => {
-    for (course of courses){
-      const {title} = course;
-      await Course.findOneAndUpdate({title},course,{upsert:true})
+    for (movie of movies){
+      const {title} = movie;
+      await Movie.findOneAndUpdate({title},movie,{upsert:true})
     }
-    const num = await Course.find({}).count();
+    const num = await Movie.find({}).count();
     res.send("data uploaded: "+num)
   }
 )
 
-app.post('/courses/bySubject',
+app.post('/movies/bySubject',
   async (req,res,next) => {
     const {year} = req.body;
-    const courses = await Course.find({year:year})  
-    res.locals.courses = courses
-    res.render('courselist')
+    const movies = await Movie.find({year:year})  
+    res.locals.movies = movies
+    res.render('movielist')
   }
 )
 
-app.post('/courses/byCourseName',
+app.post('/movies/byMovieName',
   // show list of movies bases on a given key word
   async (req,res,next) => {
     const {title} = req.body;
-    const courses = await Course.find({'title': {$regex:`${title}.*`}})
+    const movies = await Movie.find({'title': {$regex:`${title}.*`}})
     console.log("response:" + title);
-    res.locals.courses = courses
-    res.render('courselist')
+    res.locals.movies = movies
+    res.render('movielist')
   }
 )
 

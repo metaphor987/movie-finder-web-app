@@ -1,25 +1,23 @@
 
-
     <div class="jumbotron">
         <h1>Movie Finder</h1>
         <p></p>
     </div>
 
     <p class="p-3 m-3 border border-primary bg-light">
-        Huijie's CPA, a Movie Finder. You must signup or login to see
-        the courses and create your schedule.
+        Huijie's CPA, a Movie Finder.
     </p>
     
-    <% if (true || loggedIn) {%>  
-        <form method="post" action="/courses/bySubject">
-            Show Courses by Subject: 
+    <% if (true) {%>  
+        <form method="post" action="/movies/bySubject">
+            Show Movies by Year: 
               <input type="number" name="year" 
                      placeholder="e.g. 1990">
             <input type="submit">
         </form>
         <br>
 
-        <form method="post" action="/courses/byCourseName">
+        <form method="post" action="/movies/byMovieName">
             Show Movies by keyword in title: 
               <input type="text" name="title" 
                      placeholder="e.g. White">

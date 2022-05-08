@@ -1,4 +1,4 @@
-<h1>The courses are</h1>
+<h1>The movies are</h1>
 Here we want a ul list with the title, year, cast, genres
 <hr>
 <table class="table table-bordered table-striped">
@@ -9,15 +9,15 @@ Here we want a ul list with the title, year, cast, genres
         </tr>
     </thead>
     <tbody>
-    <% for (course of courses) {
-        const title = course['title'];
-        const year = course['year'];
+    <% for (movie of movies) {
+        const title = movie['title'];
+        const year = movie['year'];
          %>
       <tr class="mb-2"> 
         <td>
             <th>test</th>
-            <%=  course['year'] %>
-            <%=  course['title'] %>
+            <%=  movie['year'] %>
+            <%=  movie['title'] %>
             <br>
         </td>
     </tr>
@@ -27,6 +27,6 @@ Here we want a ul list with the title, year, cast, genres
 
 <pre>
     <!-- 
-        <%= JSON.stringify(courses,null,5) %> 
+        <%= JSON.stringify(movies,null,5) %> 
     -->
 </pre>
