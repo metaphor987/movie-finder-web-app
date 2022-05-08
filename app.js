@@ -29,9 +29,10 @@ const movies = require('./public/data/movies.json')
 // *********************************************************** //
 //  Connecting to the database
 const mongoose = require( 'mongoose' );
-const mongodb_URI = 'mongodb://localhost:27017/cs103a'
-//const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-//mongodb+srv://cs103a:<password>@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+//const mongodb_URI = 'mongodb://localhost:27017/cs103a'
+//const mongodb_URI = 'mongodb+srv://cpa2:Gn57iRLpo5TgQAYG@cluster0.vz6iv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const mongodb_URI = process.env.mongodb_URI
+console.log(process.env.mongodb_URI);
 
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
 mongoose.set('useFindAndModify', false); 
