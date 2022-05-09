@@ -1,6 +1,10 @@
 # cs103a-cpa02
 
-This is the CPA2 project of the course cs103a
+This is the CPA2 project of the course cs103a.
+
+## Demo Movie Link: 
+
+https://drive.google.com/file/d/1RRUQfeZljvQMI-F_K-Ext4nv3lqo67W5/view?usp=sharing
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
