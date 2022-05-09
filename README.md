@@ -1,6 +1,6 @@
 # cs103a-cpa02
 
-This is ...
+This is the CPA2 project of the course cs103a
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
