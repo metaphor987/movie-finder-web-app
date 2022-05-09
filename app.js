@@ -12,6 +12,13 @@ const session = require("express-session"); // to handle sessions using cookies
 const debug = require("debug")("personalapp:server"); 
 const layouts = require("express-ejs-layouts");
 const axios = require("axios")
+// read env file
+//require('dotenv').config();
+// require('dotenv').config({ path: path.resolve('/Users/melon/Documents/0_CS/Course_103A/cpa2/cs103a-cpa02', './.env') });
+//const dotenv = require('dotenv')
+//const dirname1 = '/Users/melon/Documents/0_CS/Course_103A/cpa2/cs103a-cpa02'
+//dotenv.config({path:dirname1+'/.env'});
+var MongoDBStore = require('connect-mongodb-session')(session);
 
 // *********************************************************** //
 //  Loading models
@@ -28,13 +35,14 @@ const movies = require('./public/data/movies.json')
 
 // *********************************************************** //
 //  Connecting to the database
-const mongoose = require( 'mongoose' );
+const mongoose = require('mongoose');
 //const mongodb_URI = 'mongodb://localhost:27017/cs103a'
 //const mongodb_URI = 'mongodb+srv://cpa2:Gn57iRLpo5TgQAYG@cluster0.vz6iv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const mongodb_URI = process.env.mongodb_URI
 //console.log(process.env.mongodb_URI);
 
-mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+//mongoose.connect(mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
+mongoose.connect(mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
 
@@ -46,6 +54,29 @@ db.once('open', function() {console.log("we are connected!!!")});
 // *********************************************************** //
 // Initializing the Express server 
 const app = express();
+
+var store = new MongoDBStore({
+  uri: mongodb_URI,
+  collection: 'mySessions'
+});
+
+// Catch errors
+store.on('error', function(error) {
+  console.log(error);
+});
+
+app.use(require('express-session')({
+  secret: 'This is a secret',
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+  },
+  store: store,
+  // Boilerplate options, see:
+  // * https://www.npmjs.com/package/express-session#resave
+  // * https://www.npmjs.com/package/express-session#saveuninitialized
+  resave: true,
+  saveUninitialized: true
+}));
 
 // specify that we will be using EJS as our view engine
 app.set("views", path.join(__dirname, "views"));
@@ -136,11 +167,13 @@ app.use(function(err, req, res, next) {
 // *********************************************************** //
 //  Starting up the server!
 //  Here we set the port to use between 1024 and 65535  (2^16-1)
-const port = "5000";
+const port = process.env.PORT || "5000";
+console.log('connecting on port' + port)
 app.set("port", port);
 
 // and now we startup the server listening on that port
 const http = require("http");
+const { reset } = require("nodemon");
 const server = http.createServer(app);
 
 server.listen(port);
