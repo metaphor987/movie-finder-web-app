@@ -31,8 +31,9 @@ page.
 
 Some screenshots are as follows:
 
-<img width="1004" alt="moviescreenshot1" src="https://user-images.githubusercontent.com/91745551/171929542-a5d3501c-6781-48a4-94d9-66b763b88c9a.png">
-<img width="1002" alt="moviescreenshot2" src="https://user-images.githubusercontent.com/91745551/171929590-a05d8848-5449-4eae-9cc0-617babe5b64e.png">
-<img width="1001" alt="moviescreenshot3" src="https://user-images.githubusercontent.com/91745551/171929618-69e3046a-be39-4d60-8267-2d9e7181ffd6.png">
-<img width="1001" alt="moviescreenshot4" src="https://user-images.githubusercontent.com/91745551/171929644-e51c1981-2591-4807-86f3-0fb0bb891a09.png">
-<img width="1003" alt="moviescreenshot5" src="https://user-images.githubusercontent.com/91745551/171929682-710f8874-5640-4e45-af40-f218be8f046e.png">
+<img width="1007" alt="moviescreenshot-1" src="https://user-images.githubusercontent.com/91745551/171933367-fddcfb3a-ee9c-4d06-a196-8426edfb0109.png">
+<img width="1001" alt="moviescreenshot-2" src="https://user-images.githubusercontent.com/91745551/171933369-2b59c047-bf68-4c7b-9626-f5bc27977a05.png">
+<img width="1006" alt="moviescreenshot-3" src="https://user-images.githubusercontent.com/91745551/171933370-aded1a9e-72a3-4a72-a016-38c55470ee0b.png">
+<img width="1006" alt="moviescreenshot-4" src="https://user-images.githubusercontent.com/91745551/171933372-03ebbfe2-947e-43c5-9af4-0af6fef301f6.png">
+<img width="1007" alt="moviescreenshot-5" src="https://user-images.githubusercontent.com/91745551/171933374-3bb6451b-58a9-4143-9804-57e76b9d21d8.png">
+
