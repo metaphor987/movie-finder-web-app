@@ -31,8 +31,8 @@ page.
 
 Some screenshots are as follows:
 
-<img width="992" alt="Screen Shot 2022-05-08 at 9 25 41 PM" src="https://user-images.githubusercontent.com/91745551/167325735-b3e46a85-f5f7-492d-a155-3f4a1ef1fc94.png">
-<img width="985" alt="Screen Shot 2022-05-08 at 9 26 01 PM" src="https://user-images.githubusercontent.com/91745551/167325750-cab9d31e-b321-423f-9efd-2e1ffe916e50.png">
-<img width="992" alt="Screen Shot 2022-05-08 at 9 26 17 PM" src="https://user-images.githubusercontent.com/91745551/167325786-30932b79-0485-4d10-8d94-2bf792f9afa6.png">
-<img width="993" alt="Screen Shot 2022-05-08 at 9 26 30 PM" src="https://user-images.githubusercontent.com/91745551/167325814-50b348b4-9f7f-44f5-bdde-0b3bd635e6b9.png">
-
+<img width="1004" alt="moviescreenshot1" src="https://user-images.githubusercontent.com/91745551/171929542-a5d3501c-6781-48a4-94d9-66b763b88c9a.png">
+<img width="1002" alt="moviescreenshot2" src="https://user-images.githubusercontent.com/91745551/171929590-a05d8848-5449-4eae-9cc0-617babe5b64e.png">
+<img width="1001" alt="moviescreenshot3" src="https://user-images.githubusercontent.com/91745551/171929618-69e3046a-be39-4d60-8267-2d9e7181ffd6.png">
+<img width="1001" alt="moviescreenshot4" src="https://user-images.githubusercontent.com/91745551/171929644-e51c1981-2591-4807-86f3-0fb0bb891a09.png">
+<img width="1003" alt="moviescreenshot5" src="https://user-images.githubusercontent.com/91745551/171929682-710f8874-5640-4e45-af40-f218be8f046e.png">
