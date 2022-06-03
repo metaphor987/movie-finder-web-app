@@ -12,12 +12,6 @@ const session = require("express-session"); // to handle sessions using cookies
 const debug = require("debug")("personalapp:server"); 
 const layouts = require("express-ejs-layouts");
 const axios = require("axios")
-// read env file
-//require('dotenv').config();
-// require('dotenv').config({ path: path.resolve('/Users/melon/Documents/0_CS/Course_103A/cpa2/cs103a-cpa02', './.env') });
-//const dotenv = require('dotenv')
-//const dirname1 = '/Users/melon/Documents/0_CS/Course_103A/cpa2/cs103a-cpa02'
-//dotenv.config({path:dirname1+'/.env'});
 var MongoDBStore = require('connect-mongodb-session')(session);
 
 // *********************************************************** //
@@ -36,11 +30,9 @@ const movies = require('./public/data/movies.json')
 // *********************************************************** //
 //  Connecting to the database
 const mongoose = require('mongoose');
-//const mongodb_URI = 'mongodb://localhost:27017/cs103a'
 const mongodb_URI = process.env.mongodb_URI
 //console.log(process.env.mongodb_URI);
 
-//mongoose.connect(mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
 mongoose.connect(mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
